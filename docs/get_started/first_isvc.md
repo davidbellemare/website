@@ -179,7 +179,7 @@ Depending on your setup, use one of the following commands to curl the `Inferenc
 
     If you are calling from in cluster you can curl with the internal url with host {{InferenceServiceName}}.{{namespace}}
     ```bash
-    curl -v -H "Content-Type: application/json" http://sklearn-iris.kserve-test/v1/models/sklearn-iris:predict -d @./iris-input.json
+    curl -v -H "Content-Type: application/json" http://sklearn-iris-predictor.kserve-test/v1/models/sklearn-iris:predict -d @./iris-input.json
     ```
 
 You should see two predictions returned (i.e. `{"predictions": [1, 1]}`). Both sets of data points sent for inference correspond to the flower with index `1`.
